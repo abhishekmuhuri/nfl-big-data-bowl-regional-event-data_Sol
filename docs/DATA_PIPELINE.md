@@ -88,9 +88,9 @@ Write completed files with a temporary extension, then rename them into place. U
 
 ## Incremental behavior
 
-The cache is namespaced by dataset path. Each manifest records pipeline version, sampling rate, supporting-table signatures, and each tracking file's size and modification timestamp. Unchanged files are reused; changed tracking files are rebuilt. Changes to supporting tables or sampling rate invalidate affected cached interpretation, conservatively rebuilding all games.
+The cache is namespaced by dataset path. Each manifest records pipeline version, sampling rate, supporting-table signatures, and each source file's size plus SHA-256 content identity. Unchanged files are reused even when a Git checkout or deployment changes timestamps; changed tracking files are rebuilt. Changes to supporting tables or sampling rate invalidate affected cached interpretation, conservatively rebuilding all games.
 
-Rejected files are listed in the manifest and their old cached results are not reused. Processing quality records explain exclusions and partial observations. Copying a file while preserving both its old size and modification timestamp can defeat the inexpensive change detector; use `python process_data.py --force` after such a delivery.
+Rejected files are listed in the manifest and their old cached results are not reused. Processing quality records explain exclusions and partial observations. Content hashes are memoized by path, size, and modification time within a running process; use `python process_data.py --force` if an external delivery mechanism can replace bytes while preserving both size and timestamp.
 
 Environment variables `ROUTE_RELAY_DATA_DIR` and `ROUTE_RELAY_CACHE_DIR` set default locations. Both processing and the dashboard need write access to the cache and dataset lock location. Cached data is derived and can be regenerated; source CSVs are authoritative.
 

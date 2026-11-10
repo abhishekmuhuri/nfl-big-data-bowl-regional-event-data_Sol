@@ -52,4 +52,4 @@ The reproducible default KC comparison, its settings, and its evidence are store
 
 The model does not infer intended routes, progressions, targets, defender assignments, receiver leverage, ball flight, passing-lane obstruction, quarterback visibility, catch probability, or safety of a throw. No counterfactual claim is made that moving a route will cause a better outcome. The tool identifies patterns for football review; a team should combine them with film, playbook context, and practice evaluation.
 
-The brief's focus on a useful skill-position insight, Python code, visual output, and a 3-5 sentence README is reflected in the dashboard, standalone demonstration, tests, and short root README. This repository does not establish compliance with event attendance or on-site timing rules.
+The brief's focus on a useful skill-position insight, Python code, clear visual output, reproducibility, assumptions, and limitations is reflected in the dashboard, standalone demonstration, tests, and root README. This repository does not establish compliance with event attendance or on-site timing rules.

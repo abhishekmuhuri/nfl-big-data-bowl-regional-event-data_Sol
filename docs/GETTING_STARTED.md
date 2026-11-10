@@ -37,7 +37,7 @@ Change the team, week, coverage, down, distance, or formation in the sidebar. Le
 | Package installation fails | Check internet access, your organization's Python package access, and the error in the launch window. Run `python start.py` again. |
 | Port 8501 is already in use | Close the previous launch window or run `python start.py --port 8502`. |
 | No analyzable plays | Broaden the filters and inspect data-quality details. Plays without a snap tag cannot be timed reliably. |
-| Dataset changed | Click **Refresh data** to rebuild affected games. |
+| Dataset changed | Use **Refresh data** if the dashboard has not already detected and processed the completed delivery. |
 | Another import or rebuild is running | Let the other process finish. If a process crashed, close all Route Relay processing jobs before removing the leftover `data/.route-relay.lock` file. |
 | Cannot write cache or virtual environment | Extract the ZIP to a writable folder in your user directory. |
 
