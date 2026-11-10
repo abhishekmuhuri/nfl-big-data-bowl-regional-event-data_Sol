@@ -2,10 +2,17 @@
 from dataclasses import asdict
 from pathlib import Path
 import io
+import importlib
 import json
 import numpy as np
 import pandas as pd
 import streamlit as st
+
+# Streamlit may hot-reload app.py while retaining an older imported helper
+# module. Reload only during that version transition; normal reruns keep caches.
+import pipeline as _pipeline
+if not hasattr(_pipeline,'dataset_is_locked') or not hasattr(_pipeline,'_read_manifest_file'):
+    importlib.reload(_pipeline)
 
 from pipeline import (ROOT, DEFAULT_DATA, DEFAULT_CACHE, VERSION, DataError, load_metadata,
                       inventory_signature, read_manifest, build_dataset, load_features, play_metadata,
