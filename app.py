@@ -8,7 +8,8 @@ import pandas as pd
 import streamlit as st
 
 from pipeline import (ROOT, DEFAULT_DATA, DEFAULT_CACHE, VERSION, DataError, load_metadata,
-                      inventory_signature, read_manifest, build_dataset, load_features, play_metadata)
+                      inventory_signature, read_manifest, build_dataset, load_features, play_metadata,
+                      dataset_is_locked)
 from metrics import MetricConfig, evaluate, player_summary, cohort_summary, game_bootstrap_interval
 from charts import exposure_chart, timeline_chart, player_chart, replay_chart
 from import_data import import_inputs
@@ -92,7 +93,7 @@ fps = float(saved_manifest.get('fps',10.0))
 st.sidebar.caption(f'Processing rate: {fps:g} tracking frames/second')
 refresh = st.sidebar.button('↻ Refresh data',width='stretch',help='Detect added or changed files and process only affected games.')
 try:
-    if (Path(folder)/'.route-relay.lock').exists():
+    if dataset_is_locked(folder):
         st.info('The dataset is being imported or processed. Refresh this page when that job finishes.')
         st.stop()
     signature = inventory_signature(folder)

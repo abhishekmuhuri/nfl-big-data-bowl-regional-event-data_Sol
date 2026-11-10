@@ -30,15 +30,67 @@ class DataError(ValueError):
     pass
 
 
+def _process_token(pid):
+    """Linux process start token, used to reject a reused PID after a restart."""
+    try:
+        return Path(f'/proc/{pid}/stat').read_text(encoding='utf-8').split()[21]
+    except (OSError,IndexError):
+        return ''
+
+
+def dataset_is_locked(data_dir):
+    """Return True only for a live lock; remove a lock left by a dead process."""
+    path = Path(data_dir) / '.route-relay.lock'
+    try:
+        raw = path.read_text(encoding='utf-8')
+    except FileNotFoundError:
+        return False
+    except OSError:
+        return True
+    try:
+        parts = raw.split()
+        pid = int(parts[0])
+        created = float(parts[1])
+        age = time.time() - created
+        if age > 6 * 60 * 60 or (len(parts) < 3 and age > 5 * 60):
+            alive = False
+        else:
+            try:
+                os.kill(pid,0)
+                alive = True
+            except ProcessLookupError:
+                alive = False
+            except PermissionError:
+                alive = True
+            if alive and len(parts) > 2:
+                current = _process_token(pid)
+                alive = not current or current == parts[2]
+    except (ValueError,IndexError):
+        alive = False
+    if alive:
+        return True
+    try:
+        # Do not remove a lock that was replaced while it was being inspected.
+        if path.read_text(encoding='utf-8') == raw:
+            path.unlink()
+    except FileNotFoundError:
+        pass
+    except OSError:
+        return True
+    return False
+
+
 @contextmanager
 def dataset_lock(data_dir):
     path = Path(data_dir) / '.route-relay.lock'
+    dataset_is_locked(data_dir)
     try:
         fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     except FileExistsError:
         raise DataError('Another import or rebuild is running. Try again when it finishes.') from None
     try:
-        os.write(fd, f'{os.getpid()} {time.time()}'.encode())
+        token = _process_token(os.getpid())
+        os.write(fd, f'{os.getpid()} {time.time()} {token}'.strip().encode())
         os.close(fd)
         yield
     finally:

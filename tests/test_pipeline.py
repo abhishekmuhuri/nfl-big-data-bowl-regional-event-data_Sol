@@ -4,7 +4,7 @@ import os
 import zipfile
 import pandas as pd
 import pytest
-from pipeline import build_dataset,load_features,load_metadata,DataError,fingerprint
+from pipeline import build_dataset,load_features,load_metadata,DataError,fingerprint,dataset_lock,dataset_is_locked
 from import_data import import_inputs,read_json_batches,unpack_inputs
 
 
@@ -108,3 +108,12 @@ def test_fingerprint_survives_timestamp_change_and_detects_same_size_edit(tmp_pa
     os.utime(path,ns=(stat.st_atime_ns,stat.st_mtime_ns+2_000_000_000))
     assert path.stat().st_size==stat.st_size
     assert fingerprint(path)!=original
+
+
+def test_live_lock_is_respected_and_dead_lock_is_removed(tmp_path):
+    with dataset_lock(tmp_path):
+        assert dataset_is_locked(tmp_path)
+    lock=tmp_path/'.route-relay.lock'
+    lock.write_text('999999999 0 stale',encoding='utf-8')
+    assert not dataset_is_locked(tmp_path)
+    assert not lock.exists()
