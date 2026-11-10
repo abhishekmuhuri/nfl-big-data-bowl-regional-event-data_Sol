@@ -13,6 +13,7 @@ cache/
 outputs/
 reports/*.html
 *.parquet
+!prepared_cache/*.parquet
 *.feather
 *.pkl
 *.pickle
