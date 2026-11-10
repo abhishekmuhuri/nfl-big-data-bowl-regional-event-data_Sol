@@ -7,7 +7,7 @@
 3. Double-click **START_WINDOWS.bat** inside the extracted folder.
 4. Leave its window open. Your browser will open at **http://localhost:8501**.
 
-The launcher creates a private `.venv` environment and installs the required packages automatically. The first launch needs internet access and processes the supplied games once, which can take a few minutes. Subsequent launches reuse the processed data. The data folder is already included, so there is nothing else to download.
+The launcher creates a private `.venv` environment and installs the required packages automatically. The first launch needs internet access for packages, then loads the supplied games from the validated prepared cache. New or changed tracking files are processed once and reused afterward. The data folder is already included, so there is nothing else to download.
 
 If the browser does not open automatically, enter `http://localhost:8501` yourself. Stop the application by pressing **Ctrl+C** in its launch window.
 

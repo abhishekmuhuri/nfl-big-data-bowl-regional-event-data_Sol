@@ -98,7 +98,7 @@ A route runner qualifies by default when the nearest of all 11 defenders remains
 4. Double-click `START_WINDOWS.bat`.
 5. Keep the terminal window open. The dashboard opens at `http://localhost:8501`.
 
-The launcher creates a private `.venv`, installs the pinned dependencies, and processes the included data. Initial processing can take a few minutes; unchanged games are reused on later launches.
+The launcher creates a private `.venv`, installs the pinned dependencies, and loads the included demo from a validated prepared cache. New or changed games are processed from their raw tracking CSVs and reused on later launches.
 
 ### macOS or Linux
 
@@ -173,6 +173,7 @@ Important implementation choices:
 - Missing frames contribute no exposure and break sustained windows.
 - Off-field route runners cannot provide a qualifying option.
 - Aggregate rates are exposure-weighted instead of averaging play percentages.
+- A 19 MB validated prepared cache gives the included 122-game demo a fast cold start; new or changed games still run through the full raw-data pipeline.
 - Content-based SHA-256 identities allow unchanged games to reuse processed cache files across Git and Streamlit deployments.
 
 See [docs/METHODS.md](docs/METHODS.md) for complete definitions and mathematical details.
@@ -225,7 +226,7 @@ python -m pytest
 python scripts/verify_app.py
 ```
 
-The current suite contains **21 unit and pipeline tests** covering hand-calculated windows, mirrored geometry, missing observations, terminal cutoffs, off-field eligibility, cache stability, schema validation, rejected imports, ZIP safety, and a new game supplied through the streaming interface. GitHub Actions repeats the tests on Python 3.12 for every push and pull request. See [docs/VALIDATION.md](docs/VALIDATION.md) for the full validation record.
+The current suite contains **22 unit and pipeline tests** covering hand-calculated windows, mirrored geometry, missing observations, terminal cutoffs, off-field eligibility, cache stability, stale-lock recovery, schema validation, rejected imports, ZIP safety, and a new game supplied through the streaming interface. GitHub Actions repeats the tests on Python 3.12 for every push and pull request. See [docs/VALIDATION.md](docs/VALIDATION.md) for the full validation record.
 
 ## Assumptions and limitations
 
@@ -250,6 +251,7 @@ The current suite contains **21 unit and pipeline tests** covering hand-calculat
 | `export_report.py` | Standalone HTML report and evidence export |
 | `tests/` | Unit and pipeline tests |
 | `data/` | Included source data and original dictionary |
+| `prepared_cache/` | Validated processed features for a fast demo cold start |
 | `docs/` | Setup, methods, pipeline, validation, and hosted output |
 
 ## Data attribution

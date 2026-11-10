@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import os
+import shutil
 import time
 import numpy as np
 import pandas as pd
@@ -318,12 +319,44 @@ def cache_home(data_dir=DEFAULT_DATA, cache_dir=DEFAULT_CACHE):
     return Path(cache_dir) / hashlib.sha256(str(Path(data_dir).resolve()).encode()).hexdigest()[:12]
 
 
-def read_manifest(data_dir=DEFAULT_DATA, cache_dir=DEFAULT_CACHE):
-    path = cache_home(data_dir,cache_dir) / 'manifest.json'
+def _read_manifest_file(path):
     try:
-        return json.loads(path.read_text(encoding='utf-8'))
+        return json.loads(Path(path).read_text(encoding='utf-8'))
     except (OSError,ValueError):
         return {}
+
+
+def read_manifest(data_dir=DEFAULT_DATA, cache_dir=DEFAULT_CACHE, prepared_dir=None):
+    """Read the active manifest, installing the bundled demo cache when valid."""
+    home = cache_home(data_dir,cache_dir)
+    target = home / 'manifest.json'
+    current = _read_manifest_file(target)
+    prepared = Path(prepared_dir) if prepared_dir is not None else ROOT / 'prepared_cache'
+    candidate = _read_manifest_file(prepared / 'manifest.json')
+    if not candidate:
+        return current
+    source_signature = inventory_signature(data_dir)
+    if (current.get('version') == VERSION and
+            current.get('source_signature') == source_signature):
+        return current
+    if (candidate.get('version') != VERSION or
+            candidate.get('source_signature') != source_signature):
+        return current
+    artifacts = [(entry,key,prepared/entry.get(key,'missing'))
+                 for entry in candidate.get('files',{}).values()
+                 for key in ('features','quality')]
+    if not artifacts or not all(source.is_file() for _,_,source in artifacts):
+        return current
+    home.mkdir(parents=True,exist_ok=True)
+    for entry,key,source in artifacts:
+        destination = home / entry[key]
+        if not destination.is_file():
+            shutil.copy2(source,destination)
+    installed = {**candidate,'prepared_cache':True}
+    tmp = home / 'manifest.json.tmp'
+    tmp.write_text(json.dumps(installed,indent=2),encoding='utf-8')
+    tmp.replace(target)
+    return installed
 
 
 def build_dataset(data_dir=DEFAULT_DATA, cache_dir=DEFAULT_CACHE, fps=10.0, force=False, progress=None):

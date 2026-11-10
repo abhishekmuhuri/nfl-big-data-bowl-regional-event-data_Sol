@@ -88,6 +88,8 @@ Write completed files with a temporary extension, then rename them into place. U
 
 ## Incremental behavior
 
+For the unchanged bundled 2021 dataset, `prepared_cache/` contains validated per-game feature and quality Parquet files. On a fresh local or Streamlit deployment, the pipeline installs this 19 MB cache only when its version and full source-content signature match the raw dataset. A changed or custom dataset never receives mismatched prepared results and instead follows normal validation and processing.
+
 The cache is namespaced by dataset path. Each manifest records pipeline version, sampling rate, supporting-table signatures, and each source file's size plus SHA-256 content identity. Unchanged files are reused even when a Git checkout or deployment changes timestamps; changed tracking files are rebuilt. Changes to supporting tables or sampling rate invalidate affected cached interpretation, conservatively rebuilding all games.
 
 Rejected files are listed in the manifest and their old cached results are not reused. Processing quality records explain exclusions and partial observations. Content hashes are memoized by path, size, and modification time within a running process; use `python process_data.py --force` if an external delivery mechanism can replace bytes while preserving both size and timestamp.

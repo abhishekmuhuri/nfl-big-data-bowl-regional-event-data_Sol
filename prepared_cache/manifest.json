@@ -1,0 +1,988 @@
+{
+  "version": "route-relay-1.0",
+  "fps": 10.0,
+  "metadata_signature": "408e44b14b2b3d1c9a0933178c9c6a3db36e5b0273e9f81fd9f13d773ef694f0",
+  "source_signature": "5be5d46884813b1f259a73f5caa6499667f9a7dce9f4c3d6d9adb5fd2023ed6c",
+  "built_at": "2026-11-10T18:26:20.684946+00:00",
+  "files": {
+    "tracking_2021090900.csv": {
+      "fingerprint": "9554405:de64e4d03c90b4ee4fe575ce70865211ea27e41353a830109fa0540b7741b57a",
+      "features": "cab4210e34979a25a99a-features.parquet",
+      "quality": "cab4210e34979a25a99a-quality.parquet",
+      "rows": 12689,
+      "plays": 97,
+      "excluded": 0
+    },
+    "tracking_2021091200.csv": {
+      "fingerprint": "7186385:ac6ef271808c2d28a97045125632bad4bf5f6888c8ae28d27317fa02e995874e",
+      "features": "e056726810077d5f9456-features.parquet",
+      "quality": "e056726810077d5f9456-quality.parquet",
+      "rows": 10129,
+      "plays": 73,
+      "excluded": 1
+    },
+    "tracking_2021091201.csv": {
+      "fingerprint": "7919353:d0a2e304f918611b9f80d2bcc5fca84f6dc5f35efebdcff84e614ae765fede34",
+      "features": "8c538ff49c7210db792a-features.parquet",
+      "quality": "8c538ff49c7210db792a-quality.parquet",
+      "rows": 11501,
+      "plays": 81,
+      "excluded": 0
+    },
+    "tracking_2021091202.csv": {
+      "fingerprint": "7075430:01ebdab13b637accac611f6f609c70660933cdf74edd2ae08d0c1acab30892fa",
+      "features": "a290ad52b8dd573563c3-features.parquet",
+      "quality": "a290ad52b8dd573563c3-quality.parquet",
+      "rows": 9670,
+      "plays": 72,
+      "excluded": 1
+    },
+    "tracking_2021091203.csv": {
+      "fingerprint": "7364700:d8d90c760359950a06ef3849cc87be804a1f48d723ada5a92a7fc2b84f2eb6ba",
+      "features": "2602d8458d8f74d5e274-features.parquet",
+      "quality": "2602d8458d8f74d5e274-quality.parquet",
+      "rows": 10142,
+      "plays": 76,
+      "excluded": 0
+    },
+    "tracking_2021091204.csv": {
+      "fingerprint": "8455771:af1cc6e4b951ada500ed0329d92e93d4b5636f94292f982f438386d2f5591b9e",
+      "features": "d95b12118036795ac407-features.parquet",
+      "quality": "d95b12118036795ac407-quality.parquet",
+      "rows": 12211,
+      "plays": 89,
+      "excluded": 0
+    },
+    "tracking_2021091205.csv": {
+      "fingerprint": "7822978:66a73c39b9b1954b788c449752648f0db82528ff658d481258707cd1ff8e6835",
+      "features": "83250634ef97f7213553-features.parquet",
+      "quality": "83250634ef97f7213553-quality.parquet",
+      "rows": 11211,
+      "plays": 79,
+      "excluded": 0
+    },
+    "tracking_2021091206.csv": {
+      "fingerprint": "6608940:597b5794cd14e8f61346352049b235176b6928b5545d340e22ba5ef49ad410bf",
+      "features": "7f68847927ea76a0f3ed-features.parquet",
+      "quality": "7f68847927ea76a0f3ed-quality.parquet",
+      "rows": 9383,
+      "plays": 64,
+      "excluded": 1
+    },
+    "tracking_2021091207.csv": {
+      "fingerprint": "6614159:324f6ad685b9c4f426c09bf748b518d78137be0cb751a6efede2ac467ecb27b5",
+      "features": "b734598693b2d14c6097-features.parquet",
+      "quality": "b734598693b2d14c6097-quality.parquet",
+      "rows": 9366,
+      "plays": 67,
+      "excluded": 0
+    },
+    "tracking_2021091208.csv": {
+      "fingerprint": "6695638:33ede63019faa374e88bfa48e5ffc7930daa6b41d5a2938d209cd8bfb96791f2",
+      "features": "8c2331a5c0b9180a9504-features.parquet",
+      "quality": "8c2331a5c0b9180a9504-quality.parquet",
+      "rows": 9132,
+      "plays": 71,
+      "excluded": 0
+    },
+    "tracking_2021091209.csv": {
+      "fingerprint": "6719866:359a69dbe64c9c0987f658c6eead1ca27be1865ab3be4e1643fb5a776a7dd1f3",
+      "features": "aeaecd58b6ae315521d0-features.parquet",
+      "quality": "aeaecd58b6ae315521d0-quality.parquet",
+      "rows": 9968,
+      "plays": 66,
+      "excluded": 0
+    },
+    "tracking_2021091210.csv": {
+      "fingerprint": "5582612:4784e3cc08f7e154f0b82a28429499dafb8c9a47882dec8e0f3ead509f6eb5cb",
+      "features": "e9ed43c8df2d815489af-features.parquet",
+      "quality": "e9ed43c8df2d815489af-quality.parquet",
+      "rows": 7497,
+      "plays": 60,
+      "excluded": 0
+    },
+    "tracking_2021091211.csv": {
+      "fingerprint": "4956368:c550c44398fc5d2ca11ac8059c9686b7722f410b4f68ee3a7390bc68ceb570eb",
+      "features": "87d922ae3aff78b0b549-features.parquet",
+      "quality": "87d922ae3aff78b0b549-quality.parquet",
+      "rows": 7131,
+      "plays": 48,
+      "excluded": 0
+    },
+    "tracking_2021091212.csv": {
+      "fingerprint": "7474848:3f8d219aad6866069d07f0073efc984f7e8c40e90105d9adf8ee52bc9bde52f7",
+      "features": "4d0ae32831645c1c550a-features.parquet",
+      "quality": "4d0ae32831645c1c550a-quality.parquet",
+      "rows": 10708,
+      "plays": 76,
+      "excluded": 0
+    },
+    "tracking_2021091213.csv": {
+      "fingerprint": "5933412:6e119c694bf9036e3f452406ce9fb6e6394a671f7821d0bc1f8e8a2843ef7fa8",
+      "features": "529b5edd6f0fff32576e-features.parquet",
+      "quality": "529b5edd6f0fff32576e-quality.parquet",
+      "rows": 8341,
+      "plays": 61,
+      "excluded": 0
+    },
+    "tracking_2021091300.csv": {
+      "fingerprint": "9515629:5e58eafe73f35f3a3a391d315973a95d411a2a5da9a619887b3c6448aa2a95ec",
+      "features": "c192336b111e195069c4-features.parquet",
+      "quality": "c192336b111e195069c4-quality.parquet",
+      "rows": 13403,
+      "plays": 95,
+      "excluded": 0
+    },
+    "tracking_2021091600.csv": {
+      "fingerprint": "7635333:ac10ed9c97862f0a5ad21ab1e4d53c29276cdf9562e390fc61095eb9261a2f91",
+      "features": "0817fb8fb8a39d7ea05f-features.parquet",
+      "quality": "0817fb8fb8a39d7ea05f-quality.parquet",
+      "rows": 10877,
+      "plays": 80,
+      "excluded": 0
+    },
+    "tracking_2021091900.csv": {
+      "fingerprint": "6769168:671bd678948dafb57615515efd94bfddf6a2dc9c1836a4d7068417adc7467c16",
+      "features": "2e78934dd3714eb5a8c1-features.parquet",
+      "quality": "2e78934dd3714eb5a8c1-quality.parquet",
+      "rows": 9498,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021091901.csv": {
+      "fingerprint": "6419710:22db0c2b857cbe8d878ff33f11cd71111fedfe8c7a401bc3b9b72db919d29e8a",
+      "features": "367e3af58055267e9ee3-features.parquet",
+      "quality": "367e3af58055267e9ee3-quality.parquet",
+      "rows": 9031,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021091902.csv": {
+      "fingerprint": "5368667:b9c11dd9c28013afe09d6c66c06783fabcf49a8b354acb6a15645790fb0d57a5",
+      "features": "b060490f730c819ebd81-features.parquet",
+      "quality": "b060490f730c819ebd81-quality.parquet",
+      "rows": 8047,
+      "plays": 52,
+      "excluded": 0
+    },
+    "tracking_2021091903.csv": {
+      "fingerprint": "6973383:1d3af62a7f2dc17a8bb0847f9a48551142b05e15efb24a8bf34c94e6f6086429",
+      "features": "980ed0734b488c518613-features.parquet",
+      "quality": "980ed0734b488c518613-quality.parquet",
+      "rows": 10013,
+      "plays": 64,
+      "excluded": 0
+    },
+    "tracking_2021091904.csv": {
+      "fingerprint": "7371801:3e77134ede62cdc07615965ae75ed86a7dd730374b18864535d823f9bf51100c",
+      "features": "39eff37ba395209b6cfc-features.parquet",
+      "quality": "39eff37ba395209b6cfc-quality.parquet",
+      "rows": 10900,
+      "plays": 70,
+      "excluded": 1
+    },
+    "tracking_2021091905.csv": {
+      "fingerprint": "7878147:e57e330a7c233ef29595394676be378062799229e1547a140bfa3924193fc032",
+      "features": "e1e8e5f0c5e11005fca1-features.parquet",
+      "quality": "e1e8e5f0c5e11005fca1-quality.parquet",
+      "rows": 11441,
+      "plays": 75,
+      "excluded": 0
+    },
+    "tracking_2021091906.csv": {
+      "fingerprint": "6850687:c6cf60d86593c1a8a26541200dee6c1805a6e12ec12d39010b73d50a70131b6d",
+      "features": "fb35e294116a0940a927-features.parquet",
+      "quality": "fb35e294116a0940a927-quality.parquet",
+      "rows": 9744,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021091907.csv": {
+      "fingerprint": "5309914:3fd7a9292b442ffa20457eb925e9715bbaa2bc962acf252d57dffb7403c4c156",
+      "features": "82de476e05b566973eac-features.parquet",
+      "quality": "82de476e05b566973eac-quality.parquet",
+      "rows": 7237,
+      "plays": 52,
+      "excluded": 2
+    },
+    "tracking_2021091908.csv": {
+      "fingerprint": "6737348:3814a164af3230a7edb9d30da58caee959c16aa0d252fb0f3e7495a3c75e581b",
+      "features": "9a2825318fd5845f6f25-features.parquet",
+      "quality": "9a2825318fd5845f6f25-quality.parquet",
+      "rows": 9506,
+      "plays": 74,
+      "excluded": 0
+    },
+    "tracking_2021091909.csv": {
+      "fingerprint": "6124496:852770434d4d7eb36edcb07665d5b7d0c49c1a8551220b48e8dd600a36d16284",
+      "features": "7fb7da675374b2ac204c-features.parquet",
+      "quality": "7fb7da675374b2ac204c-quality.parquet",
+      "rows": 8671,
+      "plays": 59,
+      "excluded": 1
+    },
+    "tracking_2021091910.csv": {
+      "fingerprint": "7684922:9fd40e19679ca5834d6cbcfb0497dd92a3eb8558b3d9694f087df67f60d53b3f",
+      "features": "6d52646500b0c86c80c7-features.parquet",
+      "quality": "6d52646500b0c86c80c7-quality.parquet",
+      "rows": 10477,
+      "plays": 85,
+      "excluded": 0
+    },
+    "tracking_2021091911.csv": {
+      "fingerprint": "7048617:856db65d99a0d47d318b966570df35fdf97a590b3451a9556d3370f218a859da",
+      "features": "dc9541432f0159b93648-features.parquet",
+      "quality": "dc9541432f0159b93648-quality.parquet",
+      "rows": 9657,
+      "plays": 69,
+      "excluded": 0
+    },
+    "tracking_2021091912.csv": {
+      "fingerprint": "7630472:1785c90251840e58f2f335eac929d754a39a6bfa3d7e54d3d03f736d0a8d215e",
+      "features": "9305d0cde7ff5e5f28cf-features.parquet",
+      "quality": "9305d0cde7ff5e5f28cf-quality.parquet",
+      "rows": 10383,
+      "plays": 76,
+      "excluded": 1
+    },
+    "tracking_2021091913.csv": {
+      "fingerprint": "5616332:791cc1f64e640b159f8dca65615f5b12dd125c58a0ca7d254ffee19e66c455fd",
+      "features": "721d983f465278c5644a-features.parquet",
+      "quality": "721d983f465278c5644a-quality.parquet",
+      "rows": 8018,
+      "plays": 56,
+      "excluded": 0
+    },
+    "tracking_2021092000.csv": {
+      "fingerprint": "6247362:6854cfc713845d5d12710952220fbc163cc3ab6810ae912151e8cc0d3ef4ee85",
+      "features": "a22e9a0e5471717937bf-features.parquet",
+      "quality": "a22e9a0e5471717937bf-quality.parquet",
+      "rows": 9142,
+      "plays": 60,
+      "excluded": 0
+    },
+    "tracking_2021092300.csv": {
+      "fingerprint": "6676402:b20519a732aa43610e078ea85688c1ec58fee67a236362065b33b65438bbee4d",
+      "features": "0ef6ea55970ea97f6d3d-features.parquet",
+      "quality": "0ef6ea55970ea97f6d3d-quality.parquet",
+      "rows": 9140,
+      "plays": 68,
+      "excluded": 0
+    },
+    "tracking_2021092600.csv": {
+      "fingerprint": "8185757:4a97c3cc74a3b16c4ea8f8757c6a5d072221b722ed171b31581bf2e62f13a24e",
+      "features": "82bad70c95df5fcc2384-features.parquet",
+      "quality": "82bad70c95df5fcc2384-quality.parquet",
+      "rows": 12096,
+      "plays": 74,
+      "excluded": 0
+    },
+    "tracking_2021092601.csv": {
+      "fingerprint": "6715546:37ec164c9b630e8e3bed12e3571cc7bba4ef184c1e64ada48e9044aaeb321ddb",
+      "features": "d703b51029b72a4e9760-features.parquet",
+      "quality": "d703b51029b72a4e9760-quality.parquet",
+      "rows": 10106,
+      "plays": 63,
+      "excluded": 0
+    },
+    "tracking_2021092602.csv": {
+      "fingerprint": "7682435:b164c134aa6e1f94abc4222b0081ef3aa73f7ccf2887619b006361ceb8da941e",
+      "features": "41624e328846e7886698-features.parquet",
+      "quality": "41624e328846e7886698-quality.parquet",
+      "rows": 11366,
+      "plays": 68,
+      "excluded": 0
+    },
+    "tracking_2021092603.csv": {
+      "fingerprint": "6247063:0d982b3edd3f7773f704dbaa4bd4d465ded8e3a0fbcbb6d60cf63adf335b0e45",
+      "features": "a70dac86e74de7f2831a-features.parquet",
+      "quality": "a70dac86e74de7f2831a-quality.parquet",
+      "rows": 9040,
+      "plays": 62,
+      "excluded": 0
+    },
+    "tracking_2021092604.csv": {
+      "fingerprint": "8573383:28cbf3fc462f3cd0902bdf523f8ecc376207f08a1259facb166fb65cf3327527",
+      "features": "0cf0297d527e38f7cfa3-features.parquet",
+      "quality": "0cf0297d527e38f7cfa3-quality.parquet",
+      "rows": 12366,
+      "plays": 81,
+      "excluded": 0
+    },
+    "tracking_2021092605.csv": {
+      "fingerprint": "7921498:ba94a26d8f5de98e2f20d07b86273b71ac843626ef7c273a5c4c54713de31b65",
+      "features": "9cadedeaab895d748d0b-features.parquet",
+      "quality": "9cadedeaab895d748d0b-quality.parquet",
+      "rows": 11320,
+      "plays": 77,
+      "excluded": 1
+    },
+    "tracking_2021092606.csv": {
+      "fingerprint": "7755711:bf001644440a5ebe8f50f99c7706cbb522732e3c312122b2e892785db6fb9590",
+      "features": "7202e9b2d8a42289289b-features.parquet",
+      "quality": "7202e9b2d8a42289289b-quality.parquet",
+      "rows": 10219,
+      "plays": 76,
+      "excluded": 0
+    },
+    "tracking_2021092607.csv": {
+      "fingerprint": "6880364:212b389167b0458ad1139caa9353cc44a9845ecda251df762136b9f402e79180",
+      "features": "029576d58a7dde1e7c42-features.parquet",
+      "quality": "029576d58a7dde1e7c42-quality.parquet",
+      "rows": 9729,
+      "plays": 76,
+      "excluded": 0
+    },
+    "tracking_2021092608.csv": {
+      "fingerprint": "5813069:a6c0a0967993fdf5dc68bb85d0265fb40ed37978d7b93fc1e62ee512f3cbea00",
+      "features": "72d26a39b1f719c4d5a6-features.parquet",
+      "quality": "72d26a39b1f719c4d5a6-quality.parquet",
+      "rows": 8365,
+      "plays": 60,
+      "excluded": 0
+    },
+    "tracking_2021092609.csv": {
+      "fingerprint": "6340082:d2d47075fd49f692508cc2b6a3e36737e1b85b60cb378041541ac63f70d323aa",
+      "features": "d6d3de081a58e008a02b-features.parquet",
+      "quality": "d6d3de081a58e008a02b-quality.parquet",
+      "rows": 9123,
+      "plays": 62,
+      "excluded": 0
+    },
+    "tracking_2021092610.csv": {
+      "fingerprint": "9579352:a1cf0397b9d501c2a1fb497d05c8fb6aadaf8f65fc799889372a3168219f881b",
+      "features": "954e668a12ef9aad14da-features.parquet",
+      "quality": "954e668a12ef9aad14da-quality.parquet",
+      "rows": 13478,
+      "plays": 97,
+      "excluded": 0
+    },
+    "tracking_2021092611.csv": {
+      "fingerprint": "7575380:2f72cf55be8c7b0bbb418b325271fab5c09d7c254a4ac273bb9f8eb1bba66b9f",
+      "features": "b2d1823d4bf211e0d8ce-features.parquet",
+      "quality": "b2d1823d4bf211e0d8ce-quality.parquet",
+      "rows": 10980,
+      "plays": 81,
+      "excluded": 1
+    },
+    "tracking_2021092612.csv": {
+      "fingerprint": "6151860:239eb5f5171a839008e376314e8c283cdc968e4632d76008fe7992954033f09c",
+      "features": "424ffad3da65a48a816d-features.parquet",
+      "quality": "424ffad3da65a48a816d-quality.parquet",
+      "rows": 8848,
+      "plays": 62,
+      "excluded": 0
+    },
+    "tracking_2021092613.csv": {
+      "fingerprint": "6627331:eace306b6350009aacb56a9731f38c607168967d815c173f22dfcd36cc064a8e",
+      "features": "6a446927cede890bddf8-features.parquet",
+      "quality": "6a446927cede890bddf8-quality.parquet",
+      "rows": 9655,
+      "plays": 69,
+      "excluded": 0
+    },
+    "tracking_2021092700.csv": {
+      "fingerprint": "6996119:f2a6abe6112fb8edc56399ec8b9a2858a1068d5394feea2dece0c08fca505523",
+      "features": "e71e7c7188be710a4a71-features.parquet",
+      "quality": "e71e7c7188be710a4a71-quality.parquet",
+      "rows": 10594,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021093000.csv": {
+      "fingerprint": "5773074:2b1c85f8ba877594220f1fbc45dfc5c67eba7b373297800a9f44eae8de8ee971",
+      "features": "731ebe3dc8f671648e6a-features.parquet",
+      "quality": "731ebe3dc8f671648e6a-quality.parquet",
+      "rows": 8643,
+      "plays": 53,
+      "excluded": 0
+    },
+    "tracking_2021100300.csv": {
+      "fingerprint": "8117238:f8ea97ccf0084cd22362ef2da27eca44a2b4bc09c37707f8611c6bc7653fceb6",
+      "features": "3eab7e57b83384def66e-features.parquet",
+      "quality": "3eab7e57b83384def66e-quality.parquet",
+      "rows": 11431,
+      "plays": 78,
+      "excluded": 0
+    },
+    "tracking_2021100301.csv": {
+      "fingerprint": "5076495:3db8ff4c914f2d8f54233d52d33283f816173530892315c547f5b34c44c5d6a6",
+      "features": "04db39b1ed1123c37191-features.parquet",
+      "quality": "04db39b1ed1123c37191-quality.parquet",
+      "rows": 7153,
+      "plays": 47,
+      "excluded": 0
+    },
+    "tracking_2021100302.csv": {
+      "fingerprint": "6208056:c69f4c3cbce44972b18700e272df8965906b19c73db2b8c177212410d78e7349",
+      "features": "141e8240c4b6de5012e9-features.parquet",
+      "quality": "141e8240c4b6de5012e9-quality.parquet",
+      "rows": 8761,
+      "plays": 60,
+      "excluded": 2
+    },
+    "tracking_2021100303.csv": {
+      "fingerprint": "6379660:02ee0cfaecbc2cf021086accd1a753e6e243969852a42359186205dc4a11e91c",
+      "features": "33b9160762f7b2987130-features.parquet",
+      "quality": "33b9160762f7b2987130-quality.parquet",
+      "rows": 8748,
+      "plays": 68,
+      "excluded": 0
+    },
+    "tracking_2021100304.csv": {
+      "fingerprint": "6878572:e7bcad9dbf7ac66d59040e68574fdce7a9f9ab3095e8faf7efe255b0e3aa8e63",
+      "features": "8812259315d451cdf0a5-features.parquet",
+      "quality": "8812259315d451cdf0a5-quality.parquet",
+      "rows": 9979,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021100305.csv": {
+      "fingerprint": "7509157:f253aa979d98a89a5a5f3e3075a32a10624da2097a75f7a4454351774b837707",
+      "features": "99e4e78693f245290958-features.parquet",
+      "quality": "99e4e78693f245290958-quality.parquet",
+      "rows": 10202,
+      "plays": 75,
+      "excluded": 0
+    },
+    "tracking_2021100306.csv": {
+      "fingerprint": "6151751:a39675564c545ad250e7757a75aa88e45454c713a1ffd2be7163edab2f2fc20e",
+      "features": "ce5fc966813c2927347e-features.parquet",
+      "quality": "ce5fc966813c2927347e-quality.parquet",
+      "rows": 8723,
+      "plays": 61,
+      "excluded": 0
+    },
+    "tracking_2021100307.csv": {
+      "fingerprint": "8658196:0d50adb522671832610cf7c2f17ae0f353ba702d714b7a229e066a4fb6543329",
+      "features": "c4427d7d072a1257f406-features.parquet",
+      "quality": "c4427d7d072a1257f406-quality.parquet",
+      "rows": 12043,
+      "plays": 86,
+      "excluded": 1
+    },
+    "tracking_2021100308.csv": {
+      "fingerprint": "7145065:9b4e65324f0adb7e5795546211a7aa053f69f4bcfa13c271db2311ee4570fd5d",
+      "features": "9b9615f72f54b49e31ff-features.parquet",
+      "quality": "9b9615f72f54b49e31ff-quality.parquet",
+      "rows": 10350,
+      "plays": 72,
+      "excluded": 1
+    },
+    "tracking_2021100309.csv": {
+      "fingerprint": "7513195:6a6dfa32dd636b23d304fc9ce0af513adb7bd661bf1cdbe33eae98c98ea90592",
+      "features": "5660f45a824c9a3c326a-features.parquet",
+      "quality": "5660f45a824c9a3c326a-quality.parquet",
+      "rows": 11098,
+      "plays": 76,
+      "excluded": 0
+    },
+    "tracking_2021100310.csv": {
+      "fingerprint": "6427785:1f3fbaf043bd85cc7d6986909e592ffc38fb4bd37ed5f5f212662f0bb04b7638",
+      "features": "a21bc69da758fac7951a-features.parquet",
+      "quality": "a21bc69da758fac7951a-quality.parquet",
+      "rows": 8963,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021100311.csv": {
+      "fingerprint": "8089267:e1eff580ec50fc40a4801da4d87b580ab363d8d89699cb11f6ffbb739a397ba6",
+      "features": "0d7a2644e913ba106ffd-features.parquet",
+      "quality": "0d7a2644e913ba106ffd-quality.parquet",
+      "rows": 10840,
+      "plays": 79,
+      "excluded": 0
+    },
+    "tracking_2021100312.csv": {
+      "fingerprint": "6144711:45ad67725fb33c8a56897aa79ad7af26a889db602aa302471d33760e18071831",
+      "features": "e42a6686d811ec8fcd90-features.parquet",
+      "quality": "e42a6686d811ec8fcd90-quality.parquet",
+      "rows": 8763,
+      "plays": 69,
+      "excluded": 0
+    },
+    "tracking_2021100313.csv": {
+      "fingerprint": "7847848:bf45fe38526e66fc90be09906dd5585a1a18aa6466fe1825a84ed2440e293fdb",
+      "features": "b6fbbc658ea1d588b408-features.parquet",
+      "quality": "b6fbbc658ea1d588b408-quality.parquet",
+      "rows": 10864,
+      "plays": 86,
+      "excluded": 1
+    },
+    "tracking_2021100400.csv": {
+      "fingerprint": "7009439:0f2db1f7d0ef53a0ebc10764cc8f825d756d085ba2349c8b4026429ce8b01f2d",
+      "features": "445cfb6c98c8db501aed-features.parquet",
+      "quality": "445cfb6c98c8db501aed-quality.parquet",
+      "rows": 10440,
+      "plays": 73,
+      "excluded": 0
+    },
+    "tracking_2021100700.csv": {
+      "fingerprint": "7256160:6f1edd04940e83ac86328491f4868dac7a68be89ea08e19078211d04cd67b4f3",
+      "features": "884b6370f5b7b8b26bcd-features.parquet",
+      "quality": "884b6370f5b7b8b26bcd-quality.parquet",
+      "rows": 10320,
+      "plays": 71,
+      "excluded": 1
+    },
+    "tracking_2021101000.csv": {
+      "fingerprint": "7969537:d20c277c88e32cdc64c63d8d8ae109f0690c7772785b1e78d66fd2daa30aa5f6",
+      "features": "d326ca8008abe7b2b007-features.parquet",
+      "quality": "d326ca8008abe7b2b007-quality.parquet",
+      "rows": 10656,
+      "plays": 77,
+      "excluded": 0
+    },
+    "tracking_2021101001.csv": {
+      "fingerprint": "7283933:746be4fd61b55db72cfc37e16068a8af8b6dee7bf7f7c7234838a343daa89189",
+      "features": "66ae9aa8e960bd3fd2ad-features.parquet",
+      "quality": "66ae9aa8e960bd3fd2ad-quality.parquet",
+      "rows": 10935,
+      "plays": 70,
+      "excluded": 0
+    },
+    "tracking_2021101002.csv": {
+      "fingerprint": "7538632:642c443a3faaaf3b0dc1b9eb11d8cb662cb64629d2822cbd8feeb13d664c4f8a",
+      "features": "97cf6d3c5d1645558b82-features.parquet",
+      "quality": "97cf6d3c5d1645558b82-quality.parquet",
+      "rows": 11398,
+      "plays": 73,
+      "excluded": 0
+    },
+    "tracking_2021101003.csv": {
+      "fingerprint": "5325866:0f76d8982eb61e32681d1f56d3b1333c1e3ce2049decfa1a1d8b850e917242c1",
+      "features": "412f7d2d00cfe596a1d9-features.parquet",
+      "quality": "412f7d2d00cfe596a1d9-quality.parquet",
+      "rows": 7434,
+      "plays": 54,
+      "excluded": 0
+    },
+    "tracking_2021101004.csv": {
+      "fingerprint": "6376403:bd2058df2a63063196aa1a9552640503ddabd1b9a96a34a4758c91fa7ec5f4e6",
+      "features": "3b540e5963258d7beb77-features.parquet",
+      "quality": "3b540e5963258d7beb77-quality.parquet",
+      "rows": 8604,
+      "plays": 63,
+      "excluded": 2
+    },
+    "tracking_2021101005.csv": {
+      "fingerprint": "6822522:49d89782c97c2ceca6fcf8c575817b7a7163bd826700d8939016e8469907bd69",
+      "features": "6267f4c99136680741a9-features.parquet",
+      "quality": "6267f4c99136680741a9-quality.parquet",
+      "rows": 9566,
+      "plays": 69,
+      "excluded": 0
+    },
+    "tracking_2021101006.csv": {
+      "fingerprint": "5746537:d7310f4b6765786b73c29bb24d1362404485a16d262d4a3f9032041fe4d604cd",
+      "features": "2563ca48351b93ee6b4f-features.parquet",
+      "quality": "2563ca48351b93ee6b4f-quality.parquet",
+      "rows": 8356,
+      "plays": 63,
+      "excluded": 0
+    },
+    "tracking_2021101007.csv": {
+      "fingerprint": "7694204:e8848d495d25fceeb7a8b93df035813dd2942626504abe9312e2825c26a31bd0",
+      "features": "6fcf8a68ab6baa3e79b6-features.parquet",
+      "quality": "6fcf8a68ab6baa3e79b6-quality.parquet",
+      "rows": 9978,
+      "plays": 76,
+      "excluded": 0
+    },
+    "tracking_2021101008.csv": {
+      "fingerprint": "8801296:7cec2dd97b8f24eb47fed8f876c266e4ca26c22bd00c6035014c2d1c0309ec0d",
+      "features": "bd517d56cbb9a9572fd5-features.parquet",
+      "quality": "bd517d56cbb9a9572fd5-quality.parquet",
+      "rows": 12744,
+      "plays": 80,
+      "excluded": 0
+    },
+    "tracking_2021101009.csv": {
+      "fingerprint": "6953441:57a409cf809be8a4cb2c9a09c0c9cdaa2e3e47bef55701e346f7ffda0c7706c7",
+      "features": "d285681413d4a4ac4bfe-features.parquet",
+      "quality": "d285681413d4a4ac4bfe-quality.parquet",
+      "rows": 9986,
+      "plays": 69,
+      "excluded": 0
+    },
+    "tracking_2021101010.csv": {
+      "fingerprint": "5148416:209fde682fcb3c527cd2cd6852ea301e9f5c1d7617e7770b5be7bf402ad7e780",
+      "features": "89ddc90f404d30405529-features.parquet",
+      "quality": "89ddc90f404d30405529-quality.parquet",
+      "rows": 7123,
+      "plays": 52,
+      "excluded": 0
+    },
+    "tracking_2021101011.csv": {
+      "fingerprint": "6460717:a06f35bb7dcd3f0acbe5aec227c27d53a95b3be42afbbe49bbf6b1d9988ee2e5",
+      "features": "896a49d396dafe8d8000-features.parquet",
+      "quality": "896a49d396dafe8d8000-quality.parquet",
+      "rows": 9009,
+      "plays": 59,
+      "excluded": 0
+    },
+    "tracking_2021101012.csv": {
+      "fingerprint": "6929283:2a7f2f9182b56c25411e7bf86d06f7badc4af126d41a9d3d8c9d6c901c5221d3",
+      "features": "d8542ec2fe736521c167-features.parquet",
+      "quality": "d8542ec2fe736521c167-quality.parquet",
+      "rows": 9781,
+      "plays": 68,
+      "excluded": 0
+    },
+    "tracking_2021101013.csv": {
+      "fingerprint": "8925762:32fe867bd4528254c1d8c36a2b6e76e36842c06d5df641ef123687030dc32a21",
+      "features": "47bcf88ff286080de0aa-features.parquet",
+      "quality": "47bcf88ff286080de0aa-quality.parquet",
+      "rows": 13597,
+      "plays": 84,
+      "excluded": 0
+    },
+    "tracking_2021101100.csv": {
+      "fingerprint": "8089644:f11866ca1750a3c043de580fc3cc32bf478b742cc9cb63364bbc3b677da1ef96",
+      "features": "0798360868c9626c2c7a-features.parquet",
+      "quality": "0798360868c9626c2c7a-quality.parquet",
+      "rows": 11465,
+      "plays": 80,
+      "excluded": 0
+    },
+    "tracking_2021101400.csv": {
+      "fingerprint": "6433323:47356c91ef7c699a096ebfab1eb18efaba9288e1668aecc80de115a920e4a0b6",
+      "features": "15473bf654234310ff59-features.parquet",
+      "quality": "15473bf654234310ff59-quality.parquet",
+      "rows": 9322,
+      "plays": 63,
+      "excluded": 0
+    },
+    "tracking_2021101700.csv": {
+      "fingerprint": "8350289:31b6b635bd5daf3f5f79ac1eefb8b9f9622115e238034d5130eef84b94c882f7",
+      "features": "07a3a2ba357737527cb0-features.parquet",
+      "quality": "07a3a2ba357737527cb0-quality.parquet",
+      "rows": 11102,
+      "plays": 86,
+      "excluded": 0
+    },
+    "tracking_2021101701.csv": {
+      "fingerprint": "6535859:001c50a61322fa2cbd1b8dd335429de6631454ce62e5396b29dca66cea8a7e98",
+      "features": "e28579cb504e34958418-features.parquet",
+      "quality": "e28579cb504e34958418-quality.parquet",
+      "rows": 8899,
+      "plays": 63,
+      "excluded": 0
+    },
+    "tracking_2021101702.csv": {
+      "fingerprint": "8405296:5268692d7af17569489205c70cb212db8577204ed1c0c49938a11db6627197fe",
+      "features": "3da8d94956eac9e2a8ee-features.parquet",
+      "quality": "3da8d94956eac9e2a8ee-quality.parquet",
+      "rows": 11713,
+      "plays": 85,
+      "excluded": 0
+    },
+    "tracking_2021101703.csv": {
+      "fingerprint": "6175607:07579c913063532ed5b6e20ce9cd2321acd9b8871eb9d4d27f570faf64267788",
+      "features": "1381880c36225dbd3202-features.parquet",
+      "quality": "1381880c36225dbd3202-quality.parquet",
+      "rows": 9252,
+      "plays": 57,
+      "excluded": 0
+    },
+    "tracking_2021101704.csv": {
+      "fingerprint": "7855038:716f2d6dcf76bf1f8c1b5685e88730a19602782f912be648d1c9579d6f498f7b",
+      "features": "71976047d270a123bc13-features.parquet",
+      "quality": "71976047d270a123bc13-quality.parquet",
+      "rows": 11318,
+      "plays": 80,
+      "excluded": 0
+    },
+    "tracking_2021101705.csv": {
+      "fingerprint": "5446267:4c357cafa25777cc2fc4d3db7eab11bd12eeaf6e345206640fef92ae102adebd",
+      "features": "9b304b1b5960be7e1946-features.parquet",
+      "quality": "9b304b1b5960be7e1946-quality.parquet",
+      "rows": 7472,
+      "plays": 56,
+      "excluded": 0
+    },
+    "tracking_2021101706.csv": {
+      "fingerprint": "7355471:7bbee0a3805ab3c50f54d75aed9b163a8aa7e34de21a16a60c21d3689acd388a",
+      "features": "8e51459311b467cb7dfa-features.parquet",
+      "quality": "8e51459311b467cb7dfa-quality.parquet",
+      "rows": 10411,
+      "plays": 78,
+      "excluded": 1
+    },
+    "tracking_2021101707.csv": {
+      "fingerprint": "8507039:ff1ea6f397c9fd7fac8c2cb23308b1f14c98cf13071b61e232c3eeab50d5e9e6",
+      "features": "3c3d5ad517908a9dd89b-features.parquet",
+      "quality": "3c3d5ad517908a9dd89b-quality.parquet",
+      "rows": 12570,
+      "plays": 83,
+      "excluded": 0
+    },
+    "tracking_2021101708.csv": {
+      "fingerprint": "6582565:3541153d09314beed76cbe5d8d33d6eae1f589b2bd6676447e0be7e05aa66c4d",
+      "features": "a014cbc6c0acff2a4dcd-features.parquet",
+      "quality": "a014cbc6c0acff2a4dcd-quality.parquet",
+      "rows": 9292,
+      "plays": 64,
+      "excluded": 0
+    },
+    "tracking_2021101709.csv": {
+      "fingerprint": "8317570:368a124f28694d0801a6ed9413da0a66f283e611eaf13c20f91b197c03ca4066",
+      "features": "9bf2f0b5ed5f02b1219d-features.parquet",
+      "quality": "9bf2f0b5ed5f02b1219d-quality.parquet",
+      "rows": 12289,
+      "plays": 83,
+      "excluded": 0
+    },
+    "tracking_2021101710.csv": {
+      "fingerprint": "7172018:7ff607a8a8dd208657f516603dc6abd93509751af14661cbe1a0aeb206a89856",
+      "features": "8b6cc0b37f47b2068e27-features.parquet",
+      "quality": "8b6cc0b37f47b2068e27-quality.parquet",
+      "rows": 10404,
+      "plays": 73,
+      "excluded": 0
+    },
+    "tracking_2021101711.csv": {
+      "fingerprint": "5805870:b89c6a414251211dc0ac11d923f4401a954230e09ef802dfbacd35c07d528adc",
+      "features": "b5eac478b620af84e07c-features.parquet",
+      "quality": "b5eac478b620af84e07c-quality.parquet",
+      "rows": 8121,
+      "plays": 62,
+      "excluded": 0
+    },
+    "tracking_2021101800.csv": {
+      "fingerprint": "7573178:94cf7f09774bc99de85e8b1f405a450e0c4c46a5cfd4440e73572e9272959a5a",
+      "features": "297c2528a369bdd13930-features.parquet",
+      "quality": "297c2528a369bdd13930-quality.parquet",
+      "rows": 10411,
+      "plays": 71,
+      "excluded": 1
+    },
+    "tracking_2021102100.csv": {
+      "fingerprint": "5937504:54b731d456bed69a6f4eeb9edc2cc0fc6c35ffed04ea242c5d6444c6c6199647",
+      "features": "18b954bafa1f45c57b9a-features.parquet",
+      "quality": "18b954bafa1f45c57b9a-quality.parquet",
+      "rows": 8295,
+      "plays": 60,
+      "excluded": 0
+    },
+    "tracking_2021102400.csv": {
+      "fingerprint": "9358354:2c649fc22120d741751330efd53de8a2e075aded8b3ac4e6ef4497ff3a9ed18c",
+      "features": "3b87d0c0317d6316865b-features.parquet",
+      "quality": "3b87d0c0317d6316865b-quality.parquet",
+      "rows": 13239,
+      "plays": 88,
+      "excluded": 0
+    },
+    "tracking_2021102401.csv": {
+      "fingerprint": "8044657:0cd7c31df41dd22370609ae667c4d3318067c060474626987676339abd99f9f4",
+      "features": "8471759dd3b6c2582606-features.parquet",
+      "quality": "8471759dd3b6c2582606-quality.parquet",
+      "rows": 11996,
+      "plays": 75,
+      "excluded": 0
+    },
+    "tracking_2021102402.csv": {
+      "fingerprint": "7340007:31fe505a97bb59c3421cb9dd4ae6d9bb42b354748861dcf1c75c5724e32beeb1",
+      "features": "0f6ef5c8c0a0e3b695d9-features.parquet",
+      "quality": "0f6ef5c8c0a0e3b695d9-quality.parquet",
+      "rows": 9903,
+      "plays": 74,
+      "excluded": 0
+    },
+    "tracking_2021102403.csv": {
+      "fingerprint": "7339208:536534e2e27c63c2fbcc027890034f8de5f44065badaad8ce5410577d0798cf3",
+      "features": "bc5e63878c81197ea77d-features.parquet",
+      "quality": "bc5e63878c81197ea77d-quality.parquet",
+      "rows": 10390,
+      "plays": 78,
+      "excluded": 0
+    },
+    "tracking_2021102404.csv": {
+      "fingerprint": "7571585:8bc6504fda196286b839a30735fd37f3eb3060485dfbc52918697e67bd1e6631",
+      "features": "f0bd4ba6c0fe39362e1d-features.parquet",
+      "quality": "f0bd4ba6c0fe39362e1d-quality.parquet",
+      "rows": 10489,
+      "plays": 74,
+      "excluded": 0
+    },
+    "tracking_2021102405.csv": {
+      "fingerprint": "8248434:35415320a79afbc8a98cbd86f49b98d6aa4b8d2b647e1709902b9dee98475ece",
+      "features": "119255d21cf70ba283b0-features.parquet",
+      "quality": "119255d21cf70ba283b0-quality.parquet",
+      "rows": 11829,
+      "plays": 86,
+      "excluded": 1
+    },
+    "tracking_2021102406.csv": {
+      "fingerprint": "6839480:41dabca06deae5f3d521819dd315db42b792e1c4281916e7903a57abd5af966f",
+      "features": "5a81e2b7cd0f35f03446-features.parquet",
+      "quality": "5a81e2b7cd0f35f03446-quality.parquet",
+      "rows": 9599,
+      "plays": 72,
+      "excluded": 0
+    },
+    "tracking_2021102407.csv": {
+      "fingerprint": "6647616:bd3c62bec340701388459085b9e2ebe95a502c14935a8da0f8c27f121fcbe19d",
+      "features": "02df76fe86201b6329fb-features.parquet",
+      "quality": "02df76fe86201b6329fb-quality.parquet",
+      "rows": 10152,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021102408.csv": {
+      "fingerprint": "6537327:e714cd2be68a9605e92bf7df257b4b8167e08416695e0f7eeac13f17a1546a09",
+      "features": "d4b25de170d9f1b6561b-features.parquet",
+      "quality": "d4b25de170d9f1b6561b-quality.parquet",
+      "rows": 8048,
+      "plays": 59,
+      "excluded": 1
+    },
+    "tracking_2021102409.csv": {
+      "fingerprint": "6628690:b11b88e874c06570c5368aded6448e0c2b368355e8f6ebfc4f07d89b01aa2ab5",
+      "features": "4281faa2df295e48df78-features.parquet",
+      "quality": "4281faa2df295e48df78-quality.parquet",
+      "rows": 9502,
+      "plays": 69,
+      "excluded": 0
+    },
+    "tracking_2021102410.csv": {
+      "fingerprint": "5608427:36ae00d2b72f8a7eb9e6560e1081ac5f0fa54324cee61b53e59b854ed1bf8228",
+      "features": "88fc7cbe7f56d935f4bc-features.parquet",
+      "quality": "88fc7cbe7f56d935f4bc-quality.parquet",
+      "rows": 7618,
+      "plays": 52,
+      "excluded": 1
+    },
+    "tracking_2021102500.csv": {
+      "fingerprint": "7350257:a222c0dab3ee5aefb9b569617624888451c130d7b6fe65cf6f2587c31b2913c6",
+      "features": "e5599299217081d13d16-features.parquet",
+      "quality": "e5599299217081d13d16-quality.parquet",
+      "rows": 10737,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021102800.csv": {
+      "fingerprint": "5258710:164817a6a30f12289e01b5042273a19f3d6a64ad4e6bb62862ba67fa6acabc27",
+      "features": "cdd66419d5780de93ac7-features.parquet",
+      "quality": "cdd66419d5780de93ac7-quality.parquet",
+      "rows": 7814,
+      "plays": 54,
+      "excluded": 0
+    },
+    "tracking_2021103100.csv": {
+      "fingerprint": "5223640:a520795b9bbf3568cc226335bb05b4ff5163e768cbaabfa7e0cbf302f32c6c88",
+      "features": "3108144035442c39d92a-features.parquet",
+      "quality": "3108144035442c39d92a-quality.parquet",
+      "rows": 7085,
+      "plays": 55,
+      "excluded": 0
+    },
+    "tracking_2021103101.csv": {
+      "fingerprint": "6647159:b800852b4abd42539dead5144df0cce57bc8096329bc76d064cd0d39fa70c72e",
+      "features": "2b1f8eb41b79647e5e7c-features.parquet",
+      "quality": "2b1f8eb41b79647e5e7c-quality.parquet",
+      "rows": 9152,
+      "plays": 71,
+      "excluded": 1
+    },
+    "tracking_2021103102.csv": {
+      "fingerprint": "5987355:808011a2671e17966dc92638a9c66658883401e8700bbcfabe368240c906b8ae",
+      "features": "676e2d9e727003c3f9e9-features.parquet",
+      "quality": "676e2d9e727003c3f9e9-quality.parquet",
+      "rows": 8584,
+      "plays": 63,
+      "excluded": 0
+    },
+    "tracking_2021103103.csv": {
+      "fingerprint": "5663291:9da39fc0bd98696aa7d6f9153b0c2eb8944d440e3b8e9ea2b6cba8d212b97a6e",
+      "features": "af1e61db132ea5992b02-features.parquet",
+      "quality": "af1e61db132ea5992b02-quality.parquet",
+      "rows": 7622,
+      "plays": 60,
+      "excluded": 0
+    },
+    "tracking_2021103104.csv": {
+      "fingerprint": "5748314:f76778b4f122e1214e4275edd6d8106865f057fb068343ab3bffffa0dd61ab94",
+      "features": "7e8db730ec20ce97007c-features.parquet",
+      "quality": "7e8db730ec20ce97007c-quality.parquet",
+      "rows": 8730,
+      "plays": 55,
+      "excluded": 0
+    },
+    "tracking_2021103105.csv": {
+      "fingerprint": "6278843:d9105dba59f42232105bafe3dff63acababdaae938a2d3bb1da3a5507df91f64",
+      "features": "7875ca99cc77c7fa88dc-features.parquet",
+      "quality": "7875ca99cc77c7fa88dc-quality.parquet",
+      "rows": 8782,
+      "plays": 66,
+      "excluded": 0
+    },
+    "tracking_2021103106.csv": {
+      "fingerprint": "8556249:0c96e14f418966cc68105cce38abaef7331a7af2c9bafb94dcba8b8a32aa5244",
+      "features": "9d9f13fa34574cd507a8-features.parquet",
+      "quality": "9d9f13fa34574cd507a8-quality.parquet",
+      "rows": 12435,
+      "plays": 84,
+      "excluded": 0
+    },
+    "tracking_2021103107.csv": {
+      "fingerprint": "7197015:09677d733fc4de87137a21711c12251aab6bc93ba532e1cdb258d12f91afcbb4",
+      "features": "0de408035d00a77450fa-features.parquet",
+      "quality": "0de408035d00a77450fa-quality.parquet",
+      "rows": 9952,
+      "plays": 78,
+      "excluded": 0
+    },
+    "tracking_2021103108.csv": {
+      "fingerprint": "7413837:5871e9490a497ceaa07abc5e7d7b09b27be642c58a9a0ccd81ff67dc630e3189",
+      "features": "a2ed7dbea79ce055093c-features.parquet",
+      "quality": "a2ed7dbea79ce055093c-quality.parquet",
+      "rows": 10606,
+      "plays": 75,
+      "excluded": 0
+    },
+    "tracking_2021103109.csv": {
+      "fingerprint": "7438751:ee2ba32ca60a07f16691d26aced792aa179cb94a20e97e0c6e494fe4bf79def9",
+      "features": "ac1f18ed91d64aea0bc7-features.parquet",
+      "quality": "ac1f18ed91d64aea0bc7-quality.parquet",
+      "rows": 10768,
+      "plays": 74,
+      "excluded": 0
+    },
+    "tracking_2021103110.csv": {
+      "fingerprint": "6379230:68e43ebee0ebd03218e39d6715dd20bc177615291cb65919cb63ed7e0975b795",
+      "features": "0c28154960aff77e3aba-features.parquet",
+      "quality": "0c28154960aff77e3aba-quality.parquet",
+      "rows": 9060,
+      "plays": 65,
+      "excluded": 0
+    },
+    "tracking_2021103111.csv": {
+      "fingerprint": "7262158:40952eda7d755a52e1bbb23fc8e72d43dac0da98b0ada96b8169d4cc06fc7a33",
+      "features": "b616b50834e9cb89bb4f-features.parquet",
+      "quality": "b616b50834e9cb89bb4f-quality.parquet",
+      "rows": 10157,
+      "plays": 76,
+      "excluded": 0
+    },
+    "tracking_2021103112.csv": {
+      "fingerprint": "8146444:54906cf9979095b7a2a0286711745e7e3e232092e1e529d24bb250d5e86c5e5e",
+      "features": "3cd8a421ab54e9f9780f-features.parquet",
+      "quality": "3cd8a421ab54e9f9780f-quality.parquet",
+      "rows": 11241,
+      "plays": 82,
+      "excluded": 0
+    },
+    "tracking_2021110100.csv": {
+      "fingerprint": "7866196:b7d1cf88dc878517cca94ba339e1c2c0d094c48202c10b24441d91da31162c67",
+      "features": "e6b5a75dcfc5885c7e13-features.parquet",
+      "quality": "e6b5a75dcfc5885c7e13-quality.parquet",
+      "rows": 11459,
+      "plays": 74,
+      "excluded": 0
+    }
+  },
+  "errors": [],
+  "rebuilt": 122,
+  "reused": 0
+}
