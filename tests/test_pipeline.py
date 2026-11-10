@@ -1,9 +1,10 @@
 import io
 import json
+import os
 import zipfile
 import pandas as pd
 import pytest
-from pipeline import build_dataset,load_features,load_metadata,DataError
+from pipeline import build_dataset,load_features,load_metadata,DataError,fingerprint
 from import_data import import_inputs,read_json_batches,unpack_inputs
 
 
@@ -94,3 +95,16 @@ def test_wrong_tracking_filename_is_rejected(data_folder,tmp_path):
     manifest=build_dataset(data_folder,tmp_path/'cache')
     assert not manifest['files']
     assert 'Filename' in manifest['errors'][0]['message']
+
+
+def test_fingerprint_survives_timestamp_change_and_detects_same_size_edit(tmp_path):
+    path=tmp_path/'sample.csv'
+    path.write_bytes(b'abc')
+    original=fingerprint(path)
+    stat=path.stat()
+    os.utime(path,ns=(stat.st_atime_ns,stat.st_mtime_ns+1_000_000_000))
+    assert fingerprint(path)==original
+    path.write_bytes(b'abd')
+    os.utime(path,ns=(stat.st_atime_ns,stat.st_mtime_ns+2_000_000_000))
+    assert path.stat().st_size==stat.st_size
+    assert fingerprint(path)!=original

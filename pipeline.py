@@ -1,5 +1,6 @@
 """Validated, incremental processing of NFL-format CSV datasets."""
 from contextlib import contextmanager
+from functools import lru_cache
 from pathlib import Path
 from datetime import datetime, timezone
 import hashlib
@@ -238,9 +239,20 @@ def process_game(df, metadata, fps=10.0):
     return features, pd.DataFrame(quality)
 
 
+@lru_cache(maxsize=4096)
+def _content_hash(path, size, mtime_ns):
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(block)
+    return digest.hexdigest()
+
+
 def fingerprint(path):
     stat = Path(path).stat()
-    return f'{stat.st_size}:{stat.st_mtime_ns}'
+    # Content identity survives Git checkouts and Streamlit redeploys. The
+    # cache key still includes mtime so an edited same-size file is rehashed.
+    return f'{stat.st_size}:{_content_hash(str(Path(path).resolve()),stat.st_size,stat.st_mtime_ns)}'
 
 
 def inventory_signature(data_dir=DEFAULT_DATA):

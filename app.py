@@ -99,11 +99,8 @@ try:
     metadata,meta = cached_metadata(folder,signature)
     manifest = read_manifest(folder,DEFAULT_CACHE)
     needs_build = not manifest or manifest.get('version') != VERSION
-    if refresh or needs_build:
+    if refresh or needs_build or manifest.get('source_signature') != signature:
         manifest = rebuild(folder,fps)
-    elif manifest.get('source_signature') != signature:
-        st.warning('The dataset has changed. Click Refresh data to update the analysis before continuing.')
-        st.stop()
 except (DataError,OSError,ValueError) as exc:
     st.error(f'Cannot open this dataset: {exc}')
     st.info('Use the included data folder, or see docs/GETTING_STARTED.md for the required files.')
