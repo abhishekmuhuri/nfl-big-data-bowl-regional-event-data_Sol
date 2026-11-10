@@ -1,7 +1,7 @@
 # Route Relay
 
-Route Relay is a planned Python dashboard for analyzing how NFL wide receivers, tight ends, and running backs create complementary separation windows during passing plays.
-It will measure option coverage, the longest gap without a separated receiver, each receiver's unique contribution, window duration, and separation beyond the first-down line.
-Coaches and analysts will be able to compare similar situations and inspect receiver timelines and animated plays to identify route-timing questions for film review and practice.
-The planned analysis uses the [2021 Weeks 1-8 NFL tracking and PFF scouting dataset](https://github.com/ThompsonJamesBliss/nfl-big-data-bowl-regional-event-data), with pandas and NumPy for processing, Plotly for visualization, and Streamlit for the interface.
-This repository currently contains the project setup, with implementation and findings pending; separation will be treated as a spatial proxy rather than proof of a safe throwing opportunity.
+Route Relay is a Python coaching dashboard that shows how WR, TE, and RB separation windows complement one another through situation comparisons, receiver timelines, and animated play replays.
+In 137 Kansas City plays against Cover-1 and Cover-3 across eight games, TEs and RBs supply the only separated option on 22 plays (16.1%), totaling 13.5 seconds of complementary availability.
+With separation defined as at least two yards for 0.3 seconds between 0.5 and 3.5 seconds after snap, option coverage is 98.0% of observed pre-terminal time while separation beyond the first-down line covers only 23.3%, highlighting the difference between space and situational progress.
+These retrospective, context-dependent measurements use all opposing defenders, exclude unobserved time and missing frames, and support film review rather than prove pass safety, identify a missed read, or establish causation.
+Double-click **START_WINDOWS.bat** or run **python start.py** to launch with the included [2021 NFL tracking and PFF data](data/README.md), follow the [simple setup guide](docs/GETTING_STARTED.md) and [new-data pipeline guide](docs/DATA_PIPELINE.md), or open the [interactive demonstration](https://abhishekmuhuri.github.io/nfl-big-data-bowl-regional-event-data_Sol/).

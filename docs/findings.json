@@ -1,0 +1,64 @@
+{
+  "team": "KC",
+  "coverages": [
+    "Cover-1",
+    "Cover-3"
+  ],
+  "settings": {
+    "separation_yards": 2.0,
+    "minimum_window_seconds": 0.3,
+    "start_seconds": 0.5,
+    "end_seconds": 3.5,
+    "fps": 10
+  },
+  "matching_plays": 137,
+  "measured_plays": 137,
+  "games": 8,
+  "observed_seconds": 320.6,
+  "option_coverage": 0.9797255146600123,
+  "median_longest_gap": 0.0,
+  "te_rb_unique_seconds": 13.5,
+  "te_rb_unique_plays": 22,
+  "coverage_comparison": [
+    {
+      "pff_passCoverage": "Cover-3",
+      "plays": 73,
+      "games": 8,
+      "observed_seconds": 164.3,
+      "option_seconds": 164.0,
+      "median_gap": 0.0,
+      "beyond_seconds": 42.6,
+      "line_known_seconds": 164.3,
+      "option_coverage_pct": 99.817407182,
+      "beyond_coverage_pct": 25.9281801582,
+      "small_sample": false
+    },
+    {
+      "pff_passCoverage": "Cover-1",
+      "plays": 64,
+      "games": 7,
+      "observed_seconds": 156.3,
+      "option_seconds": 150.1,
+      "median_gap": 0.0,
+      "beyond_seconds": 32.2,
+      "line_known_seconds": 156.3,
+      "option_coverage_pct": 96.0332693538,
+      "beyond_coverage_pct": 20.6014075496,
+      "small_sample": false
+    }
+  ],
+  "option_coverage_95pct_game_bootstrap": [
+    0.9557693349524052,
+    0.9954158929649243
+  ],
+  "finding": "For KC against Cover-1 and Cover-3, TEs and RBs supplied the only separated option on 22 of 137 measured plays (16.1%), totaling 13.5 seconds. These are complementary spatial windows, not proof of a safe pass or an unrecognized quarterback read.",
+  "source_signature": "cc5f4d495dcd81c01102808ed5eafe9e8be801364ba6775a08691db8170353a9",
+  "generated_at": "2026-11-10T17:24:57.494175+00:00",
+  "limitations": [
+    "Spatial separation is not pass safety.",
+    "Comparisons are descriptive and not causal.",
+    "Frames outside available clips are not observed.",
+    "Availability varies with route depth and deployment.",
+    "Data contains penalty-affected plays; raw outcomes are not official passing statistics."
+  ]
+}
