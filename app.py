@@ -87,8 +87,9 @@ st.sidebar.caption('Receiver timing · 2021 demo + your data')
 default_folder_label = 'data' if DEFAULT_DATA.resolve() == (ROOT/'data').resolve() else str(DEFAULT_DATA)
 folder_input = st.sidebar.text_input('Dataset folder',value=default_folder_label,help='Use the included data folder or paste a folder with the same CSV structure.')
 folder = str((ROOT/Path(folder_input)).resolve() if not Path(folder_input).is_absolute() else Path(folder_input).resolve())
-fps = st.sidebar.number_input('Tracking frames per second',min_value=1.0,max_value=100.0,value=10.0,step=1.0,
-                             help='The supplied dataset uses 10 Hz. Change this for a new feed only if its sampling rate differs.')
+saved_manifest = read_manifest(folder,DEFAULT_CACHE)
+fps = float(saved_manifest.get('fps',10.0))
+st.sidebar.caption(f'Processing rate: {fps:g} tracking frames/second')
 refresh = st.sidebar.button('↻ Refresh data',width='stretch',help='Detect added or changed files and process only affected games.')
 try:
     if (Path(folder)/'.route-relay.lock').exists():
@@ -97,7 +98,7 @@ try:
     signature = inventory_signature(folder)
     metadata,meta = cached_metadata(folder,signature)
     manifest = read_manifest(folder,DEFAULT_CACHE)
-    needs_build = not manifest or manifest.get('version') != VERSION or manifest.get('fps') != fps
+    needs_build = not manifest or manifest.get('version') != VERSION
     if refresh or needs_build:
         manifest = rebuild(folder,fps)
     elif manifest.get('source_signature') != signature:
@@ -156,9 +157,11 @@ st.markdown('<p class="intro">Follow the receiving options through the dropback.
             'see who supplies the only separated option, and inspect the plays behind the numbers.</p>',unsafe_allow_html=True)
 st.caption(f'{team} offense · {len(selected):,} matching plays · {len(games)} games · '
            f'{threshold:g}-yard separation · sustained for {duration:.1f}s · {interval[0]:.1f}–{interval[1]:.1f}s after snap')
-overview,explorer,data_tab = st.tabs(['Team overview','Play explorer','Data & help'])
+view = st.segmented_control(
+    'Dashboard view',['Team overview','Play explorer','Data & help'],default='Team overview',
+    key='dashboard_view',label_visibility='collapsed',width='stretch')
 
-with overview:
+if view == 'Team overview':
     if play_scores.empty:
         st.info('No analyzable plays match these filters. Broaden the situation or review the data-quality details.')
     else:
@@ -203,7 +206,7 @@ with overview:
         st.download_button('Download filtered play metrics',csv,file_name=f'route_relay_{team}_plays.csv',mime='text/csv')
         st.download_button('Download receiver metrics',player_scores.to_csv(index=False),file_name=f'route_relay_{team}_receivers.csv',mime='text/csv')
 
-with explorer:
+if view == 'Play explorer':
     if play_scores.empty:
         st.info('Choose a situation with measured plays to see the replay.')
     else:
@@ -237,7 +240,7 @@ with explorer:
                     'Is a late outlet leaving a gap? Does the same pattern recur in comparable situations? '
                     'Use these observations to choose a practice experiment, rather than infer the quarterback’s intended read.</div>',unsafe_allow_html=True)
 
-with data_tab:
+if view == 'Data & help':
     st.subheader('Bring in the next game')
     st.write('Upload supporting CSVs, tracking CSVs, or a ZIP with the same structure. New identifiers are added; '
              'matching identifiers are updated. Include the supporting rows for new games, plays, and players.')
@@ -254,6 +257,13 @@ with data_tab:
     st.markdown('For an automated feed, write completed CSVs atomically into `data/tracking/`, then use '
                 '`python process_data.py --watch`. A finite JSON batch can be piped into '
                 '`python import_data.py --stdin`; see `docs/DATA_PIPELINE.md`.')
+    st.subheader('Processing settings')
+    requested_fps = st.number_input('Tracking frames per second',min_value=1.0,max_value=100.0,value=fps,step=1.0,
+                                    help='The included dataset uses 10 Hz. Change this only when a new feed uses a different sampling rate.')
+    if st.button('Apply frame rate and reprocess',disabled=requested_fps == fps):
+        rebuild(folder,float(requested_fps))
+        st.cache_data.clear()
+        st.rerun()
     st.subheader('Data coverage and exclusions')
     st.write(f'{len(manifest.get("files",{}))} processed tracking files. '
              f'Last build: {manifest.get("built_at","unavailable")} (UTC).')
